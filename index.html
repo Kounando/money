@@ -9,14 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6f2ff; /* 薄い青の背景色 */
+            background-color: #e0f7fa; /* 薄い青の背景色 */
         }
 
         header {
-            background-color: #004080; /* 濃い青色 */
+            background-color: #006064; /* 濃い青緑色 */
             color: white;
             padding: 1rem 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
@@ -26,6 +27,7 @@
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -37,6 +39,11 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b; /* 黄色 */
         }
 
         main {
@@ -45,17 +52,50 @@
 
         section {
             margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #home {
+            background-color: #b2ebf2; /* 薄い青緑色 */
+        }
+
+        #about {
+            background-color: #e1f5fe; /* 薄い青色 */
+        }
+
+        #services {
+            background-color: #b3e5fc; /* 薄い青色 */
+        }
+
+        #survey {
+            background-color: #b2dfdb; /* 薄い緑色 */
+        }
+
+        #contact {
+            background-color: #c8e6c9; /* 薄い緑色 */
         }
 
         section h2 {
-            color: #004080; /* 濃い青色 */
+            color: #006064; /* 濃い青緑色 */
+            border-bottom: 2px solid #006064;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .survey-box {
-            border: 2px solid #004080; /* 濃い青の枠線 */
-            background-color: #cce6ff; /* 薄い青の背景色 */
+            border: 2px solid #006064; /* 濃い青緑色の枠線 */
+            background-color: #b2ebf2; /* 薄い青緑色の背景色 */
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .survey-box:hover {
+            transform: scale(1.05);
         }
 
         .survey-link {
@@ -63,19 +103,27 @@
             margin-top: 1rem;
             padding: 0.5rem 1rem;
             color: white;
-            background-color: #004080; /* 濃い青色 */
+            background-color: #006064; /* 濃い青緑色 */
             text-decoration: none;
             border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .survey-link:hover {
+            background-color: #004d40; /* さらに濃い青緑色 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         footer {
-            background-color: #004080; /* 濃い青色 */
+            background-color: #006064; /* 濃い青緑色 */
             color: white;
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -109,11 +157,6 @@
                 <li>保険サービス</li>
             </ul>
         </section>
-        <section id="contact">
-            <h2>お問い合わせ</h2>
-            <p>メール: info@financewebsite.com</p>
-            <p>電話: +123-456-7890</p>
-        </section>
         <section id="survey">
             <h2>あなたについて知りたいのでアンケートお願いします</h2>
             <div class="survey-box">
@@ -121,9 +164,14 @@
                 <a href="https://example.com/survey" target="_blank" class="survey-link">アンケートはこちら</a>
             </div>
         </section>
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>メール: info@financewebsite.com</p>
+            <p>電話: +123-456-7890</p>
+        </section>
     </main>
     <footer>
-       
+        <p>&copy; 2025 ファイナンスサイト. 全著作権所有.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
